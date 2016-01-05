@@ -1,0 +1,32 @@
+.index-shoping-block {
+  margin: 10px 10px 0px 10px;
+  border: 1px solid #cdcdcd;
+  background: #fff;
+}
+.index-shoping-block .shoping-content {
+  padding: 6px 5px 6px 5px;
+}
+.index-shoping-block .shoping-content h5 {
+  color: #000;
+  font-weight: bold;
+}
+.index-shoping-block .shoping-content h5 .font-style02 {
+  color: #fe4f00;
+}
+.index-shoping-block .shoping-content .shoping-info-L {
+  color: #656364;
+}
+/*  �������� ͷ��  */
+.user-header-box {
+  text-align: center;
+  background: #777777;
+  margin-bottom: 10px;
+  padding: 40px 0px;
+}
+.user-header-box .user-logo {
+  width: 70px;
+  height: 70px;
+  background: #007AFF;
+  border-radius: 50%;
+  display: inline-block;
+}

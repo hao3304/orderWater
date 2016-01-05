@@ -1,0 +1,109 @@
+/*  input checkbox textarea  ��ʽ����  */
+.mui-input-row {
+  margin-bottom: 8px;
+}
+.mui-input-row label {
+  width: 25%;
+  padding: 10px 10px 10px 10px;
+  color: #4a4a4a;
+  font-size: 14px;
+  text-align: right;
+}
+.mui-input-row .home-checkbox-primary {
+  width: 15%;
+  float: left;
+  vertical-align: bottom;
+  height: 18px;
+  background: #fff;
+  border: 1px solid #8e8e8e;
+}
+.checkbox-left {
+  margin-top: 15px;
+}
+textarea {
+  display: block;
+}
+/*  ��ť ��ʽ����  */
+.mui-button-row .address-delete {
+  background: #7d7d7d;
+  border: 1px solid #676767;
+  border-radius: 0px;
+  padding: 8px;
+  font-size: 14px;
+}
+.mui-button-row .address-save {
+  background: #fd5001;
+  border: 1px solid #cd3e04;
+  border-radius: 0px;
+  padding: 8px;
+  font-size: 14px;
+}
+.mui-button-row .address-btn-left {
+  float: left;
+  width: 48%;
+}
+.mui-button-row .address-btn-right {
+  float: right;
+  width: 48%;
+}
+.mui-button-padded {
+  padding: 0px 10px 0px 10px;
+}
+.mui-input-padded {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+/*�����ջ���ַ*/
+.mui-table-view-cell > a:not(.mui-btn) {
+  white-space: inherit;
+}
+.mui-table-view .address-m-info {
+  width: 85%;
+  margin-top: 5px;
+}
+.mui-table-view .telephone-right {
+  float: right;
+  padding-right: 41px;
+}
+.mui-table-view .give-fontstyle {
+  color: #f95300;
+}
+.mui-table-view .h4-user-title {
+  font-size: 15px;
+}
+.mui-table-view .h4-user-title .user-go {
+  display: block;
+}
+.mui-table-view .h4-user-title .user-arrowright {
+  vertical-align: middle;
+  font-size: 20px;
+}
+.mui-table-view .h4-user-title-line {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+.mui-table-view .user-arrow-none:after {
+  right: 0px;
+  content: none;
+}
+.user-arrow-none .address-m-info {
+  width: 100%;
+}
+.mui-navigate-right:after {
+  font-size: 20px;
+}
+.mui-table-view-cell:after {
+  left: 0px;
+}
+.home-address-fixed {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 0px 10px;
+}
+.mui-input-row label ~ input,
+.mui-input-row label ~ select,
+.mui-input-row label ~ textarea {
+  width: 70%;
+}
