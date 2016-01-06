@@ -7046,11 +7046,13 @@ var mui = (function(document, undefined) {
 	$.fn.numbox = function(options) {
 		var instanceArray = [];
 		this.options = options;
+		var self = this;
 		//遍历选择的元素
 		this.each(function(i, element) {
 			if (element.numbox) {
 				return;
 			}
+			var options = self.options;
 			if (options) {
 				element.numbox = new Numbox(element, options);
 			} else {

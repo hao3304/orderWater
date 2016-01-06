@@ -2,12 +2,12 @@
  * Created by jack on 2015/9/23.
  */
 
-var Vue = require("component_modules/vue");
-var Router = require("component_modules/director").Router;
-var loading = require("components/page/loading/loading");
-var Fastclick = require("component_modules/fastclick");
+var Vue = require("component_modules/vue.js");
+var Router = require("component_modules/director.js").Router;
+var loading = require("components/page/loading/loading.js");
+var Fastclick = require("component_modules/fastclick.js");
 var Service = require("main/service.js");
-var Layer = require("component_modules/layer.m").layer;
+var Layer = require("component_modules/layer.m.js").layer;
 
 var router = new Router();
 
@@ -23,7 +23,7 @@ window.app = new Vue({
         "loading":loading
     },
     ready:function(){
-
+        Fastclick.FastClick.attach(document.body);
     }
 });
 
