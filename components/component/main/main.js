@@ -14,7 +14,27 @@ var router = new Router();
 window.app = new Vue({
     el:"#app",
     data:{
-        currentView:"loading"
+        currentView:"loading",
+        auth:{
+
+        },
+        goods:[
+            {
+                name:"纯净水",
+                type:1,
+                price:"10.0",
+                pic:"bl.jpg",
+                des:"这是介绍文字",
+                num:0
+            },{
+                name:"天然水",
+                type:2,
+                price:"12.0",
+                pic:"nfsq.jpg",
+                des:"这是介绍文字",
+                num:0
+            }
+        ]
     },
     methods:{
 
@@ -43,49 +63,49 @@ function doRouter(target,page){
 }
 
 router.on("/loading", function () {
-    require.async(["components/page/loading/loading"], function (p) {
+    require.async(["components/page/loading/loading.js"], function (p) {
         doRouter("loading",p);
     })
 });
 
 router.on("/home", function () {
-    require.async(["components/page/home/home"], function (p) {
+    require.async(["components/page/home/home.js"], function (p) {
         doRouter("home",p);
     })
 });
 
 router.on("/order", function () {
-    require.async(["components/page/order/order"], function (p) {
+    require.async(["components/page/order/order.js"], function (p) {
         doRouter("order",p);
     })
 });
 
 router.on("/config", function () {
-    require.async(["components/page/config/config"], function (p) {
+    require.async(["components/page/config/config.js"], function (p) {
         doRouter("config",p);
     })
 });
 
 router.on("/buy", function () {
-    require.async(["components/page/buy/buy"], function (p) {
+    require.async(["components/page/buy/buy.js"], function (p) {
         doRouter("buy",p);
     })
 });
 
 router.on("/addr", function () {
-    require.async(["components/page/addr/addr"], function (p) {
+    require.async(["components/page/addr/addr.js"], function (p) {
         doRouter("addr",p);
     })
 });
 
 router.on("/addr/add", function () {
-    require.async(["components/page/addr/add/add"], function (p) {
+    require.async(["components/page/addr/add/add.js"], function (p) {
         doRouter("addr_add",p);
     })
 });
 
 router.on("/addr/edit/:id", function (id) {
-    require.async(["components/page/addr/edit/edit"], function (p) {
+    require.async(["components/page/addr/edit/edit.js"], function (p) {
         doRouter("addr_edit",p);
     })
 });

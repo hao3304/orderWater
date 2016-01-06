@@ -7,13 +7,13 @@ fis.hook('module', {
      }*/
 });
 
-//componentsÏÂÃæµÄËùÓÐjs×ÊÔ´¶¼ÊÇ×é¼þ»¯×ÊÔ´
+//componentsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jsï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 fis.match("components/**", {
     isMod: true,
     release: '/static/duliang/weixin/apps/'+user+'/static/$0'
 });
 
-//docÄ¿Â¼²»·¢²¼
+//docÄ¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 fis.match("doc/**", {
     release: false
 });
@@ -24,18 +24,18 @@ fis.match("/component_modules/*.js", {
     release: '/static/duliang/weixin/apps/'+user+'/static/$0'
 });
 
-//component×é¼þ×ÊÔ´idÖ§³Ö¼òÐ´
+//componentï¿½ï¿½ï¿½ï¿½ï¿½Ô´idÖ§ï¿½Ö¼ï¿½Ð´
 fis.match(/^\/components\/component\/(.*)$/i, {
     id : '$1'
 });
 
-//pageÀïµÄÒ³Ãæ·¢²¼µ½¸ùÄ¿Â¼
+//pageï¿½ï¿½ï¿½Ò³ï¿½æ·¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼
 fis.match("components/page/(*.html)",{
     release: '/static/duliang/weixin/apps/'+user+'/$1',
     useCache : false
 });
 
-//sassµÄ±àÒë
+//sassï¿½Ä±ï¿½ï¿½ï¿½
 fis.match('**/*.scss', {
     rExt: '.css', // from .scss to .css
     parser: fis.plugin('sass', {
@@ -43,7 +43,7 @@ fis.match('**/*.scss', {
     })
 });
 
-//ÎÄÕÂ·âÃæºÍ×÷ÕßÍ·ÏñµÈ¶¯Ì¬Í¼Æ¬µØÖ·²»¼Óhash
+//ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½È¶ï¿½Ì¬Í¼Æ¬ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½hash
 fis.match(/static\/images\/.*\.(jpeg|jpg|png)$/,{
     useHash: false,
     release: '/static/duliang/weixin/apps/'+user+'/$0'
@@ -51,11 +51,10 @@ fis.match(/static\/images\/.*\.(jpeg|jpg|png)$/,{
 
 
 fis.match('::packager', {
-    // npm install [-g] fis3-postpackager-loader
-    // ·ÖÎö __RESOURCE_MAP__ ½á¹¹£¬À´½â¾ö×ÊÔ´¼ÓÔØÎÊÌâ
+
     postpackager: fis.plugin('loader', {
         resourceType: 'mod',
-        useInlineMap: true // ×ÊÔ´Ó³Éä±íÄÚÇ¶
+        useInlineMap: true // ï¿½ï¿½Ô´Ó³ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶
     }),
     packager: fis.plugin('map'),
     spriter: fis.plugin('csssprites', {
@@ -65,7 +64,7 @@ fis.match('::packager', {
 
 
 }).match('**/*.{css,scss}', {
-    packTo: '/static/pkg/all.css' //css´ò³ÉÒ»¸ö°ü
+    packTo: '/static/pkg/all.css' //cssï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
 })
 
 fis.match("/static/**/*.*",{
@@ -73,8 +72,8 @@ fis.match("/static/**/*.*",{
     release:"/static/duliang/weixin/apps/"+user+"/$0"
 })
 
-//Éú²ú»·¾³ÏÂCSS¡¢JSÑ¹ËõºÏ²¢
-//Ê¹ÓÃ·½·¨ fis3 release prod
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CSSï¿½ï¿½JSÑ¹ï¿½ï¿½ï¿½Ï²ï¿½
+//Ê¹ï¿½Ã·ï¿½ï¿½ï¿½ fis3 release prod
 fis.media('prod')
     .match('**.js', {
         optimizer: fis.plugin('uglify-js')

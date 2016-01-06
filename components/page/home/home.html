@@ -10,23 +10,15 @@
                 </div>
             </div>
         </div>
-        <div class="index-shoping-block">
-            <img src="/static/images/bl.jpg" style="width: 100%">
+        <div v-repeat="g in goods" class="index-shoping-block">
+            <img v-attr="src:'./static/images/'+g.pic" style="width: 100%">
             <div class="shoping-content">
-                <a href="#buy" class="mui-btn f-right shoping-fix">ÔÚÏßÔ¤¶©</a>
-                <h5>´¿¾»Ë®£º<span class="font-style02">£¤10.0/Í°</span></h5>
-                <span class="shoping-info-L">´¿ÌìÈ»±ùÂ¶Í°×°Ë®5LÈÝÁ¿</span>
+                <a href="#buy" class="mui-btn f-right shoping-fix">åœ¨çº¿é¢„è®¢</a>
+                <h5>{{g.name}}<span class="font-style02">ï¿¥{{g.price}}/æ¡¶</span></h5>
+                <span class="shoping-info-L">{{g.des}}</span>
             </div>
         </div>
 
-        <div class="index-shoping-block">
-            <img src="/static/images/nfsq.jpg" style="width: 100%">
-            <div class="shoping-content">
-                <a href="#buy" class="mui-btn f-right shoping-fix">ÔÚÏßÔ¤¶©</a>
-                <h5>ÌìÈ»Ë®£º<span class="font-style02">£¤12.0/Í°</span></h5>
-                <span class="shoping-info-L">´¿ÌìÈ»±ùÂ¶Í°×°Ë®5LÈÝÁ¿</span>
-            </div>
-        </div>
 
     </div>
 
