@@ -36,29 +36,38 @@ window.app = new Vue({
             }
         ],
         addrs:[
-            {
+
+        ]
+    },
+    methods:{
+        init: function () {
+            this.getAddrs();
+        },
+        getAddrs: function () {
+            this.addrs = [{
                 "addId":"1",
                 "userName":"王××",
                 "phone":"13844567983",
                 "address":"××小区××单元",
                 "default":"1"
             },
-            {
-                "addId":"2",
-                "userName":"张××",
-                "phone":"13844567983",
-                "address":"××小区××单元",
-                "default":"0"
-            }
-        ]
-    },
-    methods:{
-
+                {
+                    "addId":"2",
+                    "userName":"张××",
+                    "phone":"13844567983",
+                    "address":"××小区××单元",
+                    "default":"0"
+                }];
+        }
     },
     components:{
         "loading":loading
     },
     ready:function(){
+        var self = this;
+        setTimeout(function () {
+            self.init();
+        },1000);
         Fastclick.FastClick.attach(document.body);
     }
 });
