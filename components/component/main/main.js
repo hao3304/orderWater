@@ -34,6 +34,22 @@ window.app = new Vue({
                 des:"这是介绍文字",
                 num:0
             }
+        ],
+        addrs:[
+            {
+                "addId":"1",
+                "userName":"王××",
+                "phone":"13844567983",
+                "address":"××小区××单元",
+                "default":"1"
+            },
+            {
+                "addId":"2",
+                "userName":"张××",
+                "phone":"13844567983",
+                "address":"××小区××单元",
+                "default":"0"
+            }
         ]
     },
     methods:{
@@ -107,6 +123,10 @@ router.on("/addr/add", function () {
 router.on("/addr/edit/:id", function (id) {
     require.async(["components/page/addr/edit/edit.js"], function (p) {
         doRouter("addr_edit",p);
+        p.options.methods.getId =  function(){
+            return id;
+        };
+        window.app.$broadcast("onEdit",id);
     })
 });
 

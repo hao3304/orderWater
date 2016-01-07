@@ -32,7 +32,7 @@
                    <img class="mui-media-object mui-pull-left" v-attr="src:'./static/images/'+g.pic" >
                    <div class="mui-media-body">
                        <h4>{{g.name}} {{g.des}}</h4>
-                       <p class="money-font">￥{{g.price}} {{g.num}}
+                       <p class="money-font">￥{{g.price}}
                        </p>
                        <div class="mui-numbox">
                            <button v-attr="disabled:g.num<1" class="mui-btn mui-btn-numbox-minus" type="button" v-on="click:onMinus(g)" >-</button>

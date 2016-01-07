@@ -11,27 +11,27 @@
     <form class="mui-input-group mui-input-padded">
         <div class="mui-input-row">
             <label>收货人</label>
-            <input type="text" placeholder="收货人姓名">
+            <input type="text" v-model="addr.userName" placeholder="收货人姓名">
         </div>
 
         <div class="mui-input-row">
             <label>手机号码</label>
-            <input type="text" placeholder="手机号码">
+            <input type="text" v-model="addr.phone" placeholder="手机号码">
         </div>
 
         <div class="mui-input-row">
             <label>送水地址</label>
-            <textarea rows="2" placeholder="送水地址"></textarea>
+            <textarea rows="2" v-model="addr.address" placeholder="送水地址"></textarea>
         </div>
 
         <div class="mui-input-row checkbox-left">
             <label></label>
-            <input class="home-checkbox-primary" type="checkbox" />
-            默认地址
+            <input name="check" class="home-checkbox-primary" type="checkbox" v-model="addr.default" />
+            <label style="padding: 0;width: 70px"  for="check">默认地址</label>
         </div>
 
         <div class="mui-button-row mui-button-padded">
-            <button class="mui-btn mui-btn-primary mui-btn-block address-delete address-btn-left">取消</button>
+            <a href="#addr" class="mui-btn mui-btn-primary mui-btn-block address-delete address-btn-left">取消</a>
             <button class="mui-btn mui-btn-primary mui-btn-block address-save address-btn-right">保存</button>
         </div>
 
